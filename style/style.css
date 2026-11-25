@@ -6,7 +6,7 @@
     --bg-gradient: linear-gradient(135deg, #eef2ff, #fff7ed);
     --surface: rgba(255, 255, 255, 0.6);
     --surface-solid: #ffffff;
-    --border: #d4d4d8;
+    --border: #71717a;
     --link: #1d4ed8;
     --accent: #1d4ed8;
     --accent-text: #ffffff;
@@ -17,7 +17,14 @@
 /* ===== Základní styly (mobile first – nejmenší displej) ===== */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 6rem;
+}
+
+a,
+button,
+[tabindex],
+section {
+    scroll-margin-top: 6rem;
 }
 
 body {
@@ -49,13 +56,14 @@ a {
 
 /* Skip link – skrytý, dokud na něj nepřejde fokus */
 .skip-link {
-    position: absolute;
+    position: fixed;
     left: 0.5rem;
     top: -10rem;
     z-index: 100;
     padding: 0.5rem 1rem;
-    background: #1a1a1a;
-    color: #ffffff;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: 0.125rem solid var(--text);
 }
 
 .skip-link:focus {
@@ -64,8 +72,6 @@ a {
 
 /* Hlavička s rozostřeným poloprůhledným pozadím */
 header {
-    position: sticky;
-    top: 0;
     z-index: 10;
     background-color: var(--surface);
     backdrop-filter: blur(0.5rem);
@@ -81,8 +87,11 @@ footer p {
 }
 
 nav .logo {
+    display: inline-block;
     font-weight: bold;
     font-size: 1.25rem;
+    padding: 0.25rem 0;
+    min-height: 2rem;
 }
 
 nav ul {
@@ -92,8 +101,19 @@ nav ul {
 }
 
 nav li a {
-    display: block;
+    display: inline-block;
+    padding: 0.35rem 0;
+    min-height: 2rem;
+}
+
+.kontakty li {
+    margin-bottom: 0.35rem;
+}
+
+.kontakty a {
+    display: inline-block;
     padding: 0.25rem 0;
+    min-height: 1.75rem;
 }
 
 section {
@@ -223,65 +243,11 @@ a:hover {
 
 /* Tablet: úvod vedle profilového obrázku, více vzduchu */
 @media (min-width: 48em) {
-    section {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+    header {
+        position: sticky;
+        top: 0;
     }
 
-    .hero {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        column-gap: 2rem;
-        align-items: center;
-    }
-
-    .hero img {
-        grid-row: 1 / span 3;
-    }
-
-    .hero > :not(img) {
-        grid-column: 2;
-        justify-self: start;
-    }
-}
-
-/* Široký monitor: tři karty vedle sebe, širší obsah */
-@media (min-width: 64em) {
-    nav,
-    section,
-    footer p {
-        max-width: 70rem;
-    }
-
-    .karty {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Malý tablet / telefon na šířku: navigace do řádku, karty ve dvou sloupcích */
-@media (min-width: 30em) {
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.5rem 1.5rem;
-    }
-
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.25rem 1.5rem;
-        margin: 0;
-    }
-
-    .karty {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Tablet: úvod vedle profilového obrázku, více vzduchu */
-@media (min-width: 48em) {
     section {
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -325,7 +291,7 @@ a:hover {
         --bg-gradient: linear-gradient(135deg, #1e1b4b, #1c1917);
         --surface: rgba(30, 30, 36, 0.6);
         --surface-solid: #1e1e24;
-        --border: #52525b;
+        --border: #9ca3af;
         --link: #93c5fd;
         --accent: #93c5fd;
         --accent-text: #0b1020;
