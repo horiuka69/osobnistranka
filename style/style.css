@@ -152,7 +152,66 @@ footer {
 
 /* ===== Media rules ===== */
 
-/* TODO: šířka okna (feature/sirka) */
+/* Šířka okna (feature/sirka) – mobile first, zlomy v em */
+
+/* Malý tablet / telefon na šířku: navigace do řádku, karty ve dvou sloupcích */
+@media (min-width: 30em) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem 1.5rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1.5rem;
+        margin: 0;
+    }
+
+    .karty {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet: úvod vedle profilového obrázku, více vzduchu */
+@media (min-width: 48em) {
+    section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 2rem;
+        align-items: center;
+    }
+
+    .hero img {
+        grid-row: 1 / span 3;
+    }
+
+    .hero > :not(img) {
+        grid-column: 2;
+        justify-self: start;
+    }
+}
+
+/* Široký monitor: tři karty vedle sebe, širší obsah */
+@media (min-width: 64em) {
+    nav,
+    section,
+    footer p {
+        max-width: 70rem;
+    }
+
+    .karty {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 /* TODO: tmavý režim (feature/tmavy-rezim) */
 
