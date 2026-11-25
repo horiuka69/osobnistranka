@@ -246,7 +246,62 @@ footer {
     }
 }
 
-/* TODO: vyšší kontrast (feature/vyssi-kontrast) */
+/* Vyšší kontrast (feature/vyssi-kontrast) – úroveň WCAG AAA (min. 7 : 1) */
+@media (prefers-contrast: more) {
+    :root {
+        --text: #000000;
+        --bg: #ffffff;
+        --bg-gradient: none;
+        --surface: #ffffff;
+        --surface-solid: #ffffff;
+        --border: #000000;
+        --link: #0000b3;
+        --accent: #000000;
+        --accent-text: #ffffff;
+        --focus: #b45309;
+    }
+
+    /* žádné přechody ani obrázky za textem */
+    body,
+    header,
+    .karta {
+        background-image: none;
+    }
+
+    /* odkazy vždy podtržené */
+    a {
+        text-decoration: underline;
+        text-decoration-thickness: 0.125em;
+    }
+
+    /* výraznější okraje */
+    header,
+    footer,
+    .karta,
+    th,
+    td {
+        border-width: 0.125rem;
+    }
+
+    .btn {
+        border: 0.125rem solid var(--text);
+    }
+}
+
+/* Kombinace: tmavý režim + vyšší kontrast */
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+    :root {
+        --text: #ffffff;
+        --bg: #000000;
+        --surface: #000000;
+        --surface-solid: #000000;
+        --border: #ffffff;
+        --link: #9fd3ff;
+        --accent: #ffffff;
+        --accent-text: #000000;
+        --focus: #ffd700;
+    }
+}
 
 /* TODO: omezený pohyb (feature/omezeny-pohyb) */
 
