@@ -13,3 +13,4 @@ Jednoduchá osobní stránka (HTML + CSS) s důrazem na přístupnost.
 | Průhlednost (`prefers-reduced-transparency`) | `feature/pruhlednost` | TODO |
 | Vynucené barvy (`forced-colors`) | `feature/vynucene-barvy` | TODO |
 | Kombinace (tmavý režim + vyšší kontrast) | `feature/vyssi-kontrast` | TODO |
+
