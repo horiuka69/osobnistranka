@@ -17,7 +17,14 @@
 /* ===== Základní styly (mobile first – nejmenší displej) ===== */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    scroll-padding-top: 6rem;
+}
+
+a,
+button,
+[tabindex],
+section {
+    scroll-margin-top: 6rem;
 }
 
 body {
@@ -64,8 +71,6 @@ a {
 
 /* Hlavička s rozostřeným poloprůhledným pozadím */
 header {
-    position: sticky;
-    top: 0;
     z-index: 10;
     background-color: var(--surface);
     backdrop-filter: blur(0.5rem);
@@ -237,65 +242,11 @@ a:hover {
 
 /* Tablet: úvod vedle profilového obrázku, více vzduchu */
 @media (min-width: 48em) {
-    section {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+    header {
+        position: sticky;
+        top: 0;
     }
 
-    .hero {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        column-gap: 2rem;
-        align-items: center;
-    }
-
-    .hero img {
-        grid-row: 1 / span 3;
-    }
-
-    .hero > :not(img) {
-        grid-column: 2;
-        justify-self: start;
-    }
-}
-
-/* Široký monitor: tři karty vedle sebe, širší obsah */
-@media (min-width: 64em) {
-    nav,
-    section,
-    footer p {
-        max-width: 70rem;
-    }
-
-    .karty {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Malý tablet / telefon na šířku: navigace do řádku, karty ve dvou sloupcích */
-@media (min-width: 30em) {
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.5rem 1.5rem;
-    }
-
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.25rem 1.5rem;
-        margin: 0;
-    }
-
-    .karty {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Tablet: úvod vedle profilového obrázku, více vzduchu */
-@media (min-width: 48em) {
     section {
         padding-top: 3rem;
         padding-bottom: 3rem;
