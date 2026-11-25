@@ -414,6 +414,13 @@ a:hover {
     }
 }
 
-/* TODO: průhlednost (feature/pruhlednost) */
+/* Průhlednost (feature/pruhlednost) – poloprůhledné pozadí a rozostření nahradit plnou barvou */
+@media (prefers-reduced-transparency: reduce) {
+    header,
+    .karta {
+        background-color: var(--surface-solid);
+        backdrop-filter: none;
+    }
+}
 
 /* TODO: vynucené barvy (feature/vynucene-barvy) */
