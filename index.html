@@ -4,41 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horia Marin – osobní stránka</title>
+    <title>Horia Marin – student SPŠE Ječná | osobní stránka</title>
+    <meta name="description" content="Osobní stránka Horii Marina – o mně, dovednosti, projekty a kontakt.">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
+    <a href="#obsah" class="skip-link">Přeskočit na hlavní obsah</a>
+
     <header>
-        <nav>
-            <a href="#uvod" class="logo">HM</a>
+        <nav aria-label="Hlavní navigace">
+            <a href="#uvod" class="logo" aria-label="Horia Marin – zpět na úvod">HM</a>
             <ul>
                 <li><a href="#o-mne">O mně</a></li>
-                <li><a href="#projekty">Projekty</a></li>
+                <li><a href="#projekty">Projekty a zájmy</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="obsah" tabindex="-1">
 
-        <section id="uvod" class="hero">
-            <img src="img/profil.svg" alt="Profilová fotka" class="profil">
-            <h1>Ahoj, jsem <span>Horia Marin</span></h1>
+        <section id="uvod" class="hero" aria-labelledby="nadpis-uvod">
+            <img src="img/profil.svg" alt="" class="profil" width="160" height="160">
+            <h1 id="nadpis-uvod">Ahoj, jsem <span>Horia Marin</span></h1>
             <p>Student SPŠE Ječná, který rád programuje a tvoří věci pro web.</p>
-            <a href="#kontakt" class="btn">Napište mi</a>
+            <a href="#kontakt" class="btn">Přejít na kontaktní údaje</a>
         </section>
 
-
-        <section id="o-mne">
-            <h2>O mně</h2>
+        <section id="o-mne" aria-labelledby="nadpis-o-mne">
+            <h2 id="nadpis-o-mne">O mně</h2>
             <p>
                 Studuji na Střední průmyslové škole elektrotechnické Ječná v Praze.
                 Baví mě programování, tvorba webových stránek a všechno, co se dá
                 rozebrat a znovu poskládat. Ve volném čase se učím nové technologie
                 a pracuji na vlastních menších projektech.
             </p>
-            <ul class="dovednosti">
+            <ul class="dovednosti" aria-label="Hlavní dovednosti">
                 <li>HTML &amp; CSS</li>
                 <li>JavaScript</li>
                 <li>Java</li>
@@ -46,81 +48,81 @@
                 <li>Elektronika</li>
             </ul>
 
-            <table class="tabulka">
-                <caption>Přehled mých dovedností</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Dovednost</th>
-                        <th scope="col">Úroveň</th>
-                        <th scope="col">Zkušenosti</th>
-                        <th scope="col">Kde jsem ji použil</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">HTML &amp; CSS</th>
-                        <td>Pokročilý</td>
-                        <td>3 roky</td>
-                        <td>Osobní web, školní projekty</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">JavaScript</th>
-                        <td>Středně pokročilý</td>
-                        <td>2 roky</td>
-                        <td>Interaktivní stránky, jednoduché hry</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Java</th>
-                        <td>Středně pokročilý</td>
-                        <td>2 roky</td>
-                        <td>Školní výuka, konzolové aplikace</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Git</th>
-                        <td>Začátečník</td>
-                        <td>1 rok</td>
-                        <td>Správa verzí projektů</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Elektronika</th>
-                        <td>Středně pokročilý</td>
-                        <td>2 roky</td>
-                        <td>Projekty s Arduinem</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="tabulka-obal" tabindex="0" role="region" aria-labelledby="popis-tabulky">
+                <table class="tabulka">
+                    <caption id="popis-tabulky">Přehled mých dovedností</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Dovednost</th>
+                            <th scope="col">Úroveň</th>
+                            <th scope="col">Zkušenosti</th>
+                            <th scope="col">Kde jsem ji použil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">HTML &amp; CSS</th>
+                            <td>Pokročilý</td>
+                            <td>3 roky</td>
+                            <td>Osobní web, školní projekty</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">JavaScript</th>
+                            <td>Středně pokročilý</td>
+                            <td>2 roky</td>
+                            <td>Interaktivní stránky, jednoduché hry</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Java</th>
+                            <td>Středně pokročilý</td>
+                            <td>2 roky</td>
+                            <td>Školní výuka, konzolové aplikace</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Git</th>
+                            <td>Začátečník</td>
+                            <td>1 rok</td>
+                            <td>Správa verzí projektů</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Elektronika</th>
+                            <td>Středně pokročilý</td>
+                            <td>2 roky</td>
+                            <td>Projekty s Arduinem</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-
-        <section id="projekty">
-            <h2>Projekty a zájmy</h2>
+        <section id="projekty" aria-labelledby="nadpis-projekty">
+            <h2 id="nadpis-projekty">Projekty a zájmy</h2>
             <div class="karty">
                 <article class="karta">
-                    <img src="img/web.svg" alt="Tvorba webových stránek">
+                    <img src="img/web.svg" alt="Ikona notebooku na modrém pozadí symbolizující tvorbu webů" width="400" height="250">
                     <h3>Tvorba webů</h3>
                     <p>Navrhuji a kóduji jednoduché webové stránky v HTML, CSS a JavaScriptu – včetně této.</p>
                 </article>
                 <article class="karta">
-                    <img src="img/hardware.svg" alt="Elektronika a Arduino">
+                    <img src="img/hardware.svg" alt="Ikona elektrické zástrčky na zeleném pozadí symbolizující elektroniku" width="400" height="250">
                     <h3>Elektronika</h3>
                     <p>Stavím malé projekty s Arduinem – senzory, LED pásky a jednoduchou automatizaci.</p>
                 </article>
                 <article class="karta">
-                    <img src="img/hry.svg" alt="Počítačové hry">
+                    <img src="img/hry.svg" alt="Ikona herního ovladače na růžovooranžovém pozadí symbolizující hry" width="400" height="250">
                     <h3>Hry</h3>
                     <p>Rád hraji počítačové hry a zkouším si naprogramovat vlastní jednoduché hry.</p>
                 </article>
             </div>
         </section>
 
-
-        <section id="kontakt">
-            <h2>Kontakt</h2>
+        <section id="kontakt" aria-labelledby="nadpis-kontakt">
+            <h2 id="nadpis-kontakt">Kontakt</h2>
             <p>Máte dotaz nebo nápad na spolupráci? Ozvěte se mi.</p>
             <ul class="kontakty">
                 <li>E-mail: <a href="mailto:marin@spsejecna.cz">marin@spsejecna.cz</a></li>
-                <li>GitHub: <a href="https://github.com/" target="_blank" rel="noopener">github.com</a></li>
-                <li>Škola: SPŠE Ječná, Ječná 30, Praha 2</li>
+                <li>GitHub: <a href="https://github.com/horiuka69">Můj profil horiuka69 na GitHubu</a></li>
+                <li>Škola: <a href="https://www.spsejecna.cz/">Web SPŠE Ječná</a> (Ječná 30, Praha 2)</li>
             </ul>
         </section>
     </main>
