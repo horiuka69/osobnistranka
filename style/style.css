@@ -6,7 +6,7 @@
     --bg-gradient: linear-gradient(135deg, #eef2ff, #fff7ed);
     --surface: rgba(255, 255, 255, 0.6);
     --surface-solid: #ffffff;
-    --border: #d4d4d8;
+    --border: #71717a;
     --link: #1d4ed8;
     --accent: #1d4ed8;
     --accent-text: #ffffff;
@@ -56,13 +56,14 @@ a {
 
 /* Skip link – skrytý, dokud na něj nepřejde fokus */
 .skip-link {
-    position: absolute;
+    position: fixed;
     left: 0.5rem;
     top: -10rem;
     z-index: 100;
     padding: 0.5rem 1rem;
-    background: #1a1a1a;
-    color: #ffffff;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: 0.125rem solid var(--text);
 }
 
 .skip-link:focus {
@@ -290,7 +291,7 @@ a:hover {
         --bg-gradient: linear-gradient(135deg, #1e1b4b, #1c1917);
         --surface: rgba(30, 30, 36, 0.6);
         --surface-solid: #1e1e24;
-        --border: #52525b;
+        --border: #9ca3af;
         --link: #93c5fd;
         --accent: #93c5fd;
         --accent-text: #0b1020;
